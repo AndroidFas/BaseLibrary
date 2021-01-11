@@ -38,7 +38,7 @@ public class RetrofitClient {
                 //错误重连
                 .retryOnConnectionFailure(true)
                 //需要对请求参数进行处理的时候添加
-             //   .addInterceptor(new ParameterInterceptor())// 拦截器
+                //   .addInterceptor(new ParameterInterceptor())// 拦截器
                 .addInterceptor(loggingInterceptor);
 
         return builder.build();
@@ -71,5 +71,8 @@ public class RetrofitClient {
         return getAPIService(TestService.class);
     }
 
+    public static BaoCrmApi getCrmApi() {
+        return getAPIService(BaoCrmApi.class);
+    }
 
 }

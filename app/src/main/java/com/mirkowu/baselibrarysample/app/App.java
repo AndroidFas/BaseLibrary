@@ -1,6 +1,7 @@
 package com.mirkowu.baselibrarysample.app;
 
 import android.content.Context;
+import android.support.multidex.MultiDex;
 
 import com.softgarden.baselibrary.BaseApplication;
 
@@ -16,7 +17,7 @@ public class App extends BaseApplication{
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-       // MultiDex.install(this);
+        MultiDex.install(this);
     }
 
     @Override

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">集成框架库</string>
+    <string name="app_name">CRM</string>
     <string name="me">我的</string>
     <string name="change_daynight_mode">切换日夜模式</string>
     <string name="changeLanguage">切换中英文</string>

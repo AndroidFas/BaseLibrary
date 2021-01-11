@@ -18,6 +18,11 @@ android {
         versionName config.versionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
+        manifestPlaceholders = [mapId: "55ee1135f5b2da573e6e2bf7ed03933a",
+                                wxAppId:"wxb685536db92198c3"]
     }
 
     // AS3.0 自定义APK安装包名
@@ -76,11 +81,17 @@ dependencies {
 
     annotationProcessor library.butterknife_compiler
 
-
+    implementation 'com.android.support:multidex:1.0.3'
 
     implementation library.TabLayout
 
     implementation 'com.google.android:flexbox:1.0.0'
 
+    //导航,3D地图so及jar
+    api 'com.amap.api:navi-3dmap:latest.integration'
+    //定位
+    implementation 'com.amap.api:location:latest.integration'
+    //搜索
+    implementation 'com.amap.api:search:latest.integration'
 
 }

@@ -4,6 +4,7 @@ apply from: "config.gradle"
 buildscript {
     
     repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
         google()
         jcenter()
     }
@@ -18,11 +19,18 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
         google()
         jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
         maven {
-            url "https://jitpack.io"
+            url 'https://maven.google.com/'
+            name 'Google'
         }
+        maven{ url 'https://dl.bintray.com/wemobiledev/maven'}
+        maven{url 'http://mvn.gt.igexin.com/nexus/content/repositories/releases'}
+//        maven { url "http://lib.gcssloop.com/repository/gcssloop-central/" }
     }
 }
 
