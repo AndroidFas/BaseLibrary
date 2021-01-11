@@ -21,5 +21,5 @@ public interface BaoCrmApi {
     Observable<OperationBordBean> getOpera(/*@Field("is_new") int is_new*/);
 
     @POST(HostUrl.getWorkingB)
-    Observable<JmLogBean> getJmLogList(/*@Field("is_new") int is_new*/);
+    Observable<String> getJmLogList(/*@Field("is_new") int is_new*/);
 }

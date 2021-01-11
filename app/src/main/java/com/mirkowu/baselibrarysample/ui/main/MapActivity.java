@@ -81,13 +81,13 @@ public class MapActivity extends BaseActivity {
         RetrofitClient.getCrmApi()
                 .getJmLogList().subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new RxCallback<JmLogBean>() {
+                .subscribe(new RxCallback<String>() {
                     @Override
-                    public void onSuccess(@Nullable JmLogBean data) {
+                    public void onSuccess(@Nullable String data) {
 //                        adapter.setNewData(data.data);
-                        if (!data.code.equals("0"))
-                            return;
-                        Log.d(TAG, "onSuccess: " + data.data);
+//                        if (!data.code.equals("0"))
+//                            return;
+                        Log.d(TAG, "onSuccess: " + data);
 
 //                        String next1 = keys.next();
 //                        Log.d(TAG, "onSuccess next1: " + next1);
